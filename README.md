@@ -17,7 +17,7 @@ Some magic happens here. Basically it's bash history size and my personalization
 
 .gitconfig
 -------------
-My Git configuration (color and shotcuts)
+My Git configuration (color and shotcuts). Important: I changed Git to push only the current branch.
 
 .irbrc
 -------------
