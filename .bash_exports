@@ -1,5 +1,0 @@
-export CLICOLOR=1
-export LSCOLORS=gxfxDxdxcxexExhxHxbxBx
-
-# that's my projects folder for cd shortcut
-export CDPATH=$CDPATH:$HOME/Documents/Projetos
