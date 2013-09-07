@@ -1,0 +1,17 @@
+export CLICOLOR=1
+export LSCOLORS=gxfxDxdxcxexExhxHxbxBx
+# ~ and my projects folder for cd shortcut
+export CDPATH=$CDPATH:/Users/diogo/Documents/Projetos:/Users/diogo
+# highlight grep match
+export GREP_OPTIONS="--color=auto"
+# light red for matches
+export GREP_COLOR="4;33"
+# hystory size
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+# ignore somethings in history
+export HISTIGNORE='&:ls:ll:[bf]g:pwd'
+# ignore duplicate line in history
+export HISTCONTROL='ignoredups:erasedups'
+# deafult editor is vim
+export EDITOR=vim
