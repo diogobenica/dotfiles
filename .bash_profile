@@ -1,3 +1,5 @@
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
 # load color
 source ~/.bash_colors
 # mac homebew
@@ -33,10 +35,10 @@ fn_exists()
 # i like to leave one blank line between commands
 PS1="\n$WHITE[$CYAN\u$CYANBOLD@$CYAN\h:$REDBOLD\w"
 if fn_exists "__rvm_ps1"; then
-  PS1=$PS1"$BLACKBOLD$(__rvm_ps1)"
+  PS1=$PS1"$BLACKBOLD\$(__rvm_ps1)"
 fi
 if fn_exists "__git_ps1"; then
-  PS1=$PS1"$YELLOWBOLD$(__git_ps1 " %s")"
+  PS1=$PS1"$YELLOWBOLD\$(__git_ps1 \" %s\")"
 fi
 PS1=$PS1"$WHITE]\n $WHITEBOLD\$$WHITE "
 # load exports and aliases files
