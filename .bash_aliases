@@ -4,6 +4,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 # List in columns
 alias ls='ls -CF'
+# List recursive tree
+alias lt='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 # Laziness for parent directory
 alias ..='cd ..'
 # Python Simple Server
