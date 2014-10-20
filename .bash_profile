@@ -1,21 +1,33 @@
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
+
+print_error(){
+  echo "*******************************"
+  echo $1
+  echo "*******************************"
+}
+source_or_error(){
+  file=$1
+  if [ -f $file ]; then
+    source $file
+  else
+    err_msg=$2
+    print_error "$err_msg"
+  fi
+}
+
 # load color
 source ~/.bash_colors
 # mac homebew
-PATH="$PATH:~/homebrew/bin"
+export PATH="/usr/local/bin:$PATH:~/homebrew/bin"
 # rvm loader
-source ~/.rvm/scripts/rvm
+source_or_error ~/.rvm/scripts/rvm "No RVM installed"
 # bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+source_or_error $(brew --prefix)/etc/bash_completion "No bash-completion installed"
 # git completion
-GIT_COMPLETION=/usr/local/git/contrib/completion/git-completion.bash
-[[ -s $GIT_COMPLETION ]] && source $GIT_COMPLETION
+source_or_error /usr/local/Cellar/git/2.1.2/etc/bash_completion.d/git-completion.bash "No git-completion installed"
 # git prompt
-GIT_PROMPT=/usr/local/git/contrib/completion/git-prompt.sh
-[[ -s $GIT_PROMPT ]] && source $GIT_PROMPT
+source_or_error /usr/local/Cellar/git/2.1.2/etc/bash_completion.d/git-prompt.sh "No git-prompt installed"
 # rvm function for ruby version
 if [ -s "$HOME/.rvm/bin/rvm-prompt" ]; then
   __rvm_ps1()
@@ -44,8 +56,3 @@ PS1=$PS1"$WHITE]\n $WHITEBOLD\$$WHITE "
 # load exports and aliases files
 [[ -s "$HOME/.bash_exports" ]] && . "$HOME/.bash_exports"
 [[ -s "$HOME/.bash_aliases" ]] && . "$HOME/.bash_aliases"
-
-# homebrew completions
-if [ `which brew 2> /dev/null` ] && [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
