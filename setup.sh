@@ -36,6 +36,10 @@ if [[ ($ITERM_RUNNING > 0) ]]; then
 else
   rm ~/Library/Preferences/com.googlecode.iterm2.plist
   ln -s $dir/files/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+  # don't read from cache
+  defaults read com.googlecode.iterm2
+fi
+
 SPECTACLE_RUNNING=$(ps -ef | grep Spectacle.app | grep -cv grep)
 if [[ ($SPECTACLE_RUNNING > 0) ]]; then
   echo "[error] Spectacle profile file wasn't copied"
@@ -43,6 +47,8 @@ if [[ ($SPECTACLE_RUNNING > 0) ]]; then
 else
   rm ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
   ln -s $dir/files/com.divisiblebyzero.Spectacle.plist ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
+  # don't read from cache
+  defaults read com.divisiblebyzero.Spectacle.plist
 fi
 
 source ~/.bash_profile
