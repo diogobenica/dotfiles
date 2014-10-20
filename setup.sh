@@ -36,6 +36,13 @@ if [[ ($ITERM_RUNNING > 0) ]]; then
 else
   rm ~/Library/Preferences/com.googlecode.iterm2.plist
   ln -s $dir/files/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+SPECTACLE_RUNNING=$(ps -ef | grep Spectacle.app | grep -cv grep)
+if [[ ($SPECTACLE_RUNNING > 0) ]]; then
+  echo "[error] Spectacle profile file wasn't copied"
+  echo "******** Close Spectacle to update the profile file ********"
+else
+  rm ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
+  ln -s $dir/files/com.divisiblebyzero.Spectacle.plist ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
 fi
 
 source ~/.bash_profile
