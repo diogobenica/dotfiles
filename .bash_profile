@@ -25,9 +25,9 @@ source_or_error ~/.rvm/scripts/rvm "No RVM installed"
 # bash completion
 source_or_error $(brew --prefix)/etc/bash_completion "No bash-completion installed"
 # git completion
-source_or_error /usr/local/Cellar/git/2.1.2/etc/bash_completion.d/git-completion.bash "No git-completion installed"
+source_or_error $(brew --prefix)/etc/bash_completion.d/git-completion.bash "No git-completion installed"
 # git prompt
-source_or_error /usr/local/Cellar/git/2.1.2/etc/bash_completion.d/git-prompt.sh "No git-prompt installed"
+source_or_error $(brew --prefix)/etc/bash_completion.d/git-prompt.sh "No git-prompt installed"
 # rvm function for ruby version
 if [ -s "$HOME/.rvm/bin/rvm-prompt" ]; then
   __rvm_ps1()
