@@ -10,12 +10,6 @@ alias lt='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 alias ..='cd ..'
 # Python Simple Server
 alias server='python -m SimpleHTTPServer'
-# cd and sublime :)
-cdAndSublime(){
-  cd $1
-  s .
-}
-alias cds=cdAndSublime
 # ps + grep
 alias psg='ps -ef | grep -v grep | grep'
 # Reload dotfiles
