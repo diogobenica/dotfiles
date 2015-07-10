@@ -51,4 +51,7 @@ else
   defaults read com.divisiblebyzero.Spectacle.plist
 fi
 
+# copy apps
+ln -s $dir/apps/PickColor.app /Applications/PickColor.app
+
 source ~/.bash_profile
