@@ -53,5 +53,6 @@ fi
 
 # copy apps
 ln -s $dir/apps/PickColor.app /Applications/PickColor.app
+ln -s $dir/apps/blueutil /usr/local/bin/blueutil
 
 source ~/.bash_profile
