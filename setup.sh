@@ -27,6 +27,9 @@ for file in $files; do
 done
 echo "Dotfiles done!"
 
+# brew installation
+sh $dir/setup/brew
+
 # copy files
 echo "Now I'll copy some preferences files"
 ITERM_RUNNING=$(ps -ef | grep iTerm | grep -cv grep)

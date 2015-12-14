@@ -1,0 +1,38 @@
+# install brew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# install brew-cask
+brew tap caskroom/cask
+
+# install git
+brew install git
+
+# install bash-completion
+brew install bash-completion
+
+# install atom
+brew cask install atom
+
+# install betterzip
+brew cask install betterzip
+
+# install firefox
+brew cask install firefox
+
+# change firefox to beta channel
+sed 's/release/beta/g' ~/Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
+
+# install gitx
+brew cask install gitx
+
+# install iterm2
+brew cask install iterm2
+
+# install spectacle
+brew cask install spectacle
+
+# install utorrent
+brew cask install utorrent
+
+# install vlc
+brew cask install vlc
