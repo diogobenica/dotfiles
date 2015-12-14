@@ -1,0 +1,2 @@
+# install rvm and latest ruby
+curl -sSL https://get.rvm.io | bash -s stable

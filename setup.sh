@@ -30,6 +30,9 @@ echo "Dotfiles done!"
 # brew installation
 sh $dir/setup/brew
 
+# ruby installation
+sh $dir/setup/ruby
+
 # copy files
 echo "Now I'll copy some preferences files"
 ITERM_RUNNING=$(ps -ef | grep iTerm | grep -cv grep)
