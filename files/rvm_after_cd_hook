@@ -1,0 +1,6 @@
+if [ -f ./Gemfile ]; then
+  rvm gemset list | grep ${PWD##*/} > /dev/null
+  if [ $? -eq 0 ]; then
+    rvm gemset use ${PWD##*/}
+  fi
+fi

@@ -1,2 +1,5 @@
 # install rvm and latest ruby
 curl -sSL https://get.rvm.io | bash -s stable
+
+# copy hook file for automatic gemset recognition
+cp ../files/rvm_after_cd_hook ~/.rvm/hooks/after_cd
