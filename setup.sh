@@ -43,7 +43,7 @@ else
   rm ~/Library/Preferences/com.googlecode.iterm2.plist
   ln -s $dir/files/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
   # don't read from cache
-  defaults read com.googlecode.iterm2
+  defaults read com.googlecode.iterm2 1> /dev/null
 fi
 
 SPECTACLE_RUNNING=$(ps -ef | grep Spectacle.app | grep -cv grep)
@@ -54,7 +54,7 @@ else
   rm ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
   ln -s $dir/files/com.divisiblebyzero.Spectacle.plist ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
   # don't read from cache
-  defaults read com.divisiblebyzero.Spectacle.plist
+  defaults read com.divisiblebyzero.Spectacle.plist 1> /dev/null
 fi
 
 # copy apps
