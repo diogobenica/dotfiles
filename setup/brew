@@ -23,7 +23,7 @@ brew cask install firefox
 sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
 
 # install gitx
-brew cask install gitx
+brew cask install rowanj-gitx
 
 # install iterm2
 brew cask install iterm2
