@@ -20,7 +20,7 @@ brew cask install betterzip
 brew cask install firefox
 
 # change firefox to beta channel
-sed 's/release/beta/g' ~/Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
+sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
 
 # install gitx
 brew cask install gitx
