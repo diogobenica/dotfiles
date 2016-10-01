@@ -23,7 +23,7 @@ brew cask install firefox
 sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
 
 # install flux
-brew cask install flux
+brew cask install fluxz
 
 # install gitx
 brew cask install rowanj-gitx
@@ -39,3 +39,6 @@ brew cask install utorrent
 
 # install vlc
 brew cask install vlc
+
+# install whatsapp
+brew cask install whatsapp
