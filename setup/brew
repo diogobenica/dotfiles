@@ -26,7 +26,9 @@ sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pre
 brew cask install fluxz
 
 # install gitx
-brew cask install rowanj-gitx
+# brew cask install rowanj-gitx
+# not compatible with Sierra, install github
+brew cask install github-desktop
 
 # install iterm2
 brew cask install iterm2
