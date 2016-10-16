@@ -5,9 +5,12 @@ My personal dotfiles. It's more like a backup for me. So, use it by your own ris
 It works on my MacBook and there is some things specially for Macs, so be careful when copying to your own dotfile.
 
 - Installs many apps via brew and cask (see setup/brew)
-- Install ruby via rvm
+- Install Ruby via RVM
 - Configuration for Homebrew, iTerm2, RVM and Spectacle.
 - Copy the ColorPicker and blueutil app.
+- Choose RVM gemset with same directory name on every directory change
+- Set Git aliases
+- Set bash aliases
 
 The auto installer backups all your dotfiles in user directory (~/) into a folder called "dotfiles_old"
 
