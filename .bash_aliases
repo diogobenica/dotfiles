@@ -22,4 +22,4 @@ iTermTabName(){
 }
 alias tn=iTermTabName
 # Only IP
-alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\ -f2'
+alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d" " -f2'
