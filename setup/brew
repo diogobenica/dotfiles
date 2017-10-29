@@ -13,6 +13,9 @@ brew install bash-completion
 # install atom
 brew cask install atom
 
+# install authy-desktop
+brew cask install authy-desktop
+
 # install betterzip
 brew cask install betterzip
 
