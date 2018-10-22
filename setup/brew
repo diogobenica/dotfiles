@@ -22,9 +22,6 @@ brew cask install firefox
 # change firefox to beta channel
 sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
 
-# install flux
-brew cask install fluxz
-
 # install gitx
 # brew cask install rowanj-gitx
 # not compatible with Sierra, install github
