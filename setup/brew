@@ -28,7 +28,7 @@ brew cask install fluxz
 # install gitx
 # brew cask install rowanj-gitx
 # not compatible with Sierra, install github
-brew cask install github-desktop
+brew cask install github
 
 # install iterm2
 brew cask install iterm2
