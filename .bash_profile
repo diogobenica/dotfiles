@@ -56,3 +56,4 @@ PS1=$PS1"$WHITE]\n $WHITEBOLD\$$WHITE "
 # load exports and aliases files
 [[ -s "$HOME/.bash_exports" ]] && . "$HOME/.bash_exports"
 [[ -s "$HOME/.bash_aliases" ]] && . "$HOME/.bash_aliases"
+export PATH=/usr/local/sbin:$PATH
