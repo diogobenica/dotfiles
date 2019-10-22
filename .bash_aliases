@@ -23,3 +23,5 @@ iTermTabName(){
 alias tn=iTermTabName
 # Only IP
 alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d" " -f2'
+# Find process by port
+function port() { sudo lsof -i tcp:$1; }
