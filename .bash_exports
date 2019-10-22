@@ -15,3 +15,6 @@ export HISTIGNORE='&:ls:ll:[bf]g:pwd'
 export HISTCONTROL='ignoredups:erasedups'
 # default editor is vim
 export EDITOR=vim
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
