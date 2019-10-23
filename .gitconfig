@@ -1,6 +1,6 @@
 [user]
-  name = Diogo Benicá
-  email = diogobenica@gmail.com
+	name = Diogo Benicá
+	email = diogobenica@gmail.com
 [push]
   default = current
 [alias]
@@ -19,3 +19,5 @@
   status = auto
 [color "status"]
   changed = yellow
+[core]
+	excludesfile = /Users/diogo/.gitignore_global
