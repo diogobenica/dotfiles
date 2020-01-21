@@ -16,6 +16,8 @@ source_or_error(){
   fi
 }
 
+# load youse config
+source ~/.youse
 # load color
 source ~/.bash_colors
 # mac homebew
