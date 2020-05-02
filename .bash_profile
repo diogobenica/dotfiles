@@ -1,6 +1,8 @@
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 print_error(){
   echo "*******************************"
   echo $1
@@ -51,6 +53,9 @@ PS1="\n$WHITE[$CYAN\u$CYANBOLD@$CYAN\h:$REDBOLD\w"
 if fn_exists "__rvm_ps1"; then
   PS1=$PS1"$BLACKBOLD\$(__rvm_ps1)"
 fi
+if [ $AWS_PS1_PROFILE ]; then
+  PS1=$PS1"$AWS_PS1_PROFILE"
+fi
 if fn_exists "__git_ps1"; then
   PS1=$PS1"$YELLOWBOLD\$(__git_ps1 \" %s\")"
 fi
@@ -58,4 +63,33 @@ PS1=$PS1"$WHITE]\n $WHITEBOLD\$$WHITE "
 # load exports and aliases files
 [[ -s "$HOME/.bash_exports" ]] && . "$HOME/.bash_exports"
 [[ -s "$HOME/.bash_aliases" ]] && . "$HOME/.bash_aliases"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH=/usr/local/sbin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/diogo/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/diogo/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/diogo/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/diogo/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+# added by Anaconda3 2019.03 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+
+AWS_PROFILE=default
+AWS_DEFAULT_REGION=sa-east-1
+export LAZY_BASH=/Users/diogo/.lazy-bash
+source $LAZY_BASH/lazy_bash.sh
+eval "$(pyenv init -)"
