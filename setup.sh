@@ -11,6 +11,10 @@ olddir=~/dotfiles_old       # old dotfiles backup directory
 files="bash_aliases bash_colors bash_exports bash_profile bashrc gemrc gitconfig irbrc"    # list of files/folders to symlink in homedir
 
 ##########
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 echo "I'll move your actual dotfiles to ~/dotfiles_old"
 echo "After that, I'm going to make symlinks to ~/ of the dotfiles"
 
