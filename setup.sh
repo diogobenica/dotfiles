@@ -46,6 +46,7 @@ if [[ ($ITERM_RUNNING > 0) ]]; then
 else
   rm ~/Library/Preferences/com.googlecode.iterm2.plist
   ln -s $dir/files/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+  ln -s $dir/files/diogobenica.zsh-theme ~/.oh-my-zsh/custom/themes/diogobenica.zsh-theme
   # don't read from cache
   defaults read com.googlecode.iterm2 1> /dev/null
 fi
