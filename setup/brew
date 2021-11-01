@@ -1,9 +1,6 @@
 # install brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install brew-cask
-brew tap caskroom/cask
-
 # install git
 brew install git
 
@@ -11,36 +8,34 @@ brew install git
 brew install bash-completion
 
 # install atom
-brew cask install atom
+brew install atom
 
 # install authy-desktop
-brew cask install authy-desktop
+brew install authy-desktop
 
 # install betterzip
-brew cask install betterzip
+brew install betterzip
 
 # install firefox
-brew cask install firefox
+brew install firefox
 
 # change firefox to beta channel
 sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
 
-# install gitx
-# brew cask install rowanj-gitx
 # not compatible with Sierra, install github
-brew cask install github
+brew install github
 
 # install iterm2
-brew cask install iterm2
+brew install iterm2
 
 # install spectacle
-brew cask install spectacle
+brew install spectacle
 
 # install transmission
-brew cask install transmission
+brew install transmission
 
 # install vlc
-brew cask install vlc
+brew install vlc
 
 # install whatsapp
-brew cask install whatsapp
+brew install whatsapp
