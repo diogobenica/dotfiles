@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 setopt auto_cd
-cdpath=($HOME/Projects $HOME)
+cdpath=($HOME/dev $HOME)
 
 eval "$(pyenv init -)"
 export LC_ALL=en_US.UTF-8
