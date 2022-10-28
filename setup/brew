@@ -19,9 +19,6 @@ brew install betterzip
 # install firefox
 brew install firefox
 
-# change firefox to beta channel
-sed 's/release/beta/g' /Applications/Firefox.app/Contents/Resources/defaults/pref/channel-prefs.js
-
 # not compatible with Sierra, install github
 brew install github
 
