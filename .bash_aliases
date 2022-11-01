@@ -25,7 +25,3 @@ alias tn=iTermTabName
 alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d" " -f2'
 # Find process by port
 function port() { sudo lsof -i tcp:$1; }
-
-function yconsole() {
-  kubectl exec -it $(kubectl get pods | grep -i -m 1 "$1.*puma" | awk '{print $1}') /bin/bash
-}
